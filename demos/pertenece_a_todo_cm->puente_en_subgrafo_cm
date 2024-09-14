@@ -1,0 +1,25 @@
+IDA
+quiero ver que si e es puente en P => e pertenece a todos los caminos minimos de v1 a vn en G.
+esto es equivalente a ver que si e es puente en P => e es critica en G.
+
+
+
+
+
+
+
+VUELTA
+quiero ver que e=vi->vj esta en todos los caminos minimos de v1 a vn en G => e es puente en P, el subgrafo de caminos minimos de v1 a vn en G.
+
+Veamos esto por absurdo. Asumo que e no es una arista puente en P. 
+Luego, la remocion de e en P no afecta la cantidad de componenetes conexas, es decir que el grafo sigue siendo conexo (era conexo de antes porque se que existe un camino minimo de v1 a vn, si existiese la demostracion es trivial)
+Que siga siendo conexo quiere decir que puedo llegar desde un vertice hasta otro, tomamos v1 y vn ;)
+
+Es decir, hay un camino en P desde v1 a vn que no utiliza e=vi->vj
+
+(aclaracion: e pertenece a P puesto que e pertenece a todos los caminos minimos de v1 a vn en G por hipotesis)
+
+Luego, como todos los caminos de v1 a vn  en P son caminos minimos (por def de subgrafo de caminos minimos), implica que si puedo llegar desde v1 a vn en P sin utilizar una arista, es porque esa arista no pertenece a todos los caminos minimos de v1 a vn en G.
+
+Entonces, llego a un absurdo! Si puedo llegar desde v1 a vn sin utilizar vi-> vj es porque vi->vj no pertenece a todos los caminos minimos en G, lo que contradice mi hipotesis.
+
